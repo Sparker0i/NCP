@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Periodicals</title>
+        <script>
+            var cnt = 0;
+            function addSubject() {
+                ++cnt;
+                if (cnt == 1)
+                    document.getElementById("1").innerHTML += "<p>Monday is NCP</p>";
+                else if (cnt == 2)
+                    document.getElementById("1").innerHTML += "<p>Tuesday is SICP</p>";
+                else
+                    document.getElementById("1").innerHTML += "<p>Do we have More Subjects?</p>";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="1">1st periodical exam</p>
+        <input type="button" onclick="addSubject()" value="Submit">
+    </body>
+</html>

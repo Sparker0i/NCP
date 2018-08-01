@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Cursor Pointer</title>
+        <meta charset="UTF-8">
+        <script>
+            function pointCursor() {
+                document.getElementById("nameget").focus();
+            }
+        </script>
+    </head>
+    <body onload="pointCursor()">
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table name="birthdaywish">
+                    <tr>
+                        <td></td>
+                        <td>Date: <input type="text" id="dateget"></td>
+                    </tr>
+                    <tr>
+                        <td>Name: </td>
+                        <td id='dateput'><input type="text" id="nameget"></td>
+                    </tr>
+                </table>
+                <input type="button" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

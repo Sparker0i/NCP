@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Hello Birthday</title>
+        <meta charset="UTF-8">
+        <script>
+            function wishBirthday() {
+                var months = ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"];
+                var dt = document.getElementById("dateget").value;
+                var date = new Date(dt);
+                var month = date.toLocaleString("en-us", { month: "long" });
+                var day = date.getDate();
+                if (day == 1)
+                    day += "st";
+                else if (day == 2)
+                    day += "nd";
+                else if (day == 3)
+                    day += "rd";
+                else    
+                    day += "th";
+                document.getElementById("dateput").innerHTML = day + " " + month + " " + date.getFullYear();
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table name="birthdaywish">
+                    <tr>
+                        <td>Enter DOB (MM-DD-YYYY):</td>
+                        <td><input type="text" id="dateget"></td>
+                    </tr>
+                    <tr>
+                        <td>Your Birthday: </td>
+                        <td id='dateput'></td>
+                    </tr>
+                </table>
+                <input type="button" onclick="wishBirthday()" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

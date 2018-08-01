@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Hello Time</title>
+        <meta charset="UTF-8">
+        <script>
+                function doTime() {
+                    var date = new Date();
+                    var hours = date.getHours();
+                    if (hours < 12) {
+                        document.body.innerHTML = "Good Morning";
+                    }
+                    else {
+                        document.body.innerHTML = "Good Afternoon";
+                    }
+                }
+            </script>
+    </head>
+    <body onload="doTime()">
+        
+    </body>
+</html>
